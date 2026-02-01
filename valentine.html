@@ -5,22 +5,34 @@
   <style>
     body {
       text-align: center;
-      margin-top: 100px;
-      font-family: Arial;
+      margin-top: 80px;
+      font-family: 'Arial', sans-serif;
       background: pink;
+      color: #fff;
     }
     h1 {
-      font-size: 40px;
+      font-size: 42px;
       color: white;
       text-shadow: 2px 2px red;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 20px;
+      margin-bottom: 40px;
+      color: #fff;
+      text-shadow: 1px 1px #ff0000;
     }
     button {
       font-size: 20px;
-      padding: 10px 30px;
-      margin: 20px;
+      padding: 12px 35px;
+      margin: 15px;
       border: none;
-      border-radius: 10px;
+      border-radius: 12px;
       cursor: pointer;
+      transition: transform 0.2s;
+    }
+    button:hover {
+      transform: scale(1.1);
     }
     #yes { background: red; color: white; }
     #no { background: gray; color: white; }
@@ -28,7 +40,8 @@
 </head>
 <body>
 
-<!-- <h1>💖 Will you be my Valentine? 💖</h1> -->
+<h1>💖 Will you be my Valentine? 💖</h1>
+<p>Just one word can make my day 💌</p>
 
 <button id="yes">Yes ❤️</button>
 <button id="no">No 💔</button>
@@ -39,16 +52,15 @@
 
 <script>
   document.getElementById("yes").onclick = function () {
-    alert("She said YES 😍");
+    alert("Yay! She said YES 😍💖");
     fetch("save.php?answer=YES");
   }
 
   document.getElementById("no").onclick = function () {
-    alert("She said NO 😢");
+    alert("Oh… She said NO 😢💔");
     fetch("save.php?answer=NO");
   }
 </script>
 
 </body>
 </html>
-
